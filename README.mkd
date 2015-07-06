@@ -1,0 +1,11 @@
+# Dungeon World Move Finder
+
+[Go play with it!](http://dw-move-finder.herokuapp.com)
+
+Starting with [Hard Moves & GM Intrusions Part 1: Combat Calamaities](http://www.rpgalchemy.com/hard-moves-gm-intrusions-1/), John Lewis at [RPG Alchemy](http://www.rpgalchemy.com) wrote a series of articles containing suggestions for creative moves a GM of [Dungeon World](http://www.dungeon-world.com) (or similar tabletop role-playing games) could make in any of a number of different situations. I think it's an extremely useful series of articles, but I wanted it to be even easier for me to find one of those suggestions during actual play, when my brain might have a thousand thoughts vying for attention, and pausing to look through a list of hundreds of moves will kill the flow of the game.
+
+On top of that, I wanted to play [Redux](https://github.com/gaearon/redux), a Flux implementation for use with Facebook's React.js.
+
+## Redux
+
+At some point, I'll have fuller thoughts on Redux here. For now, though, I remain on the fence. I don't naturally think in a "functional programming" way, so Redux feels a bit like obfuscation, or perhaps just a solution in search of a problem. It might be that I will never get its utility building toy apps for role-playing games, but that won't stop me from trying.
