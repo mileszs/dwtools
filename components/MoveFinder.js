@@ -1,47 +1,40 @@
 import React from 'react';
 import movesJSON from '../moves'
 import _ from 'lodash'
+import classNames from 'classnames'
 
 export default class MoveFinder {
   render() {
-    let buttons = []
-    let buttonsHTML = ''
-    let currentLevel = this.currentLevel()
-    if (_.isArray(currentLevel)) {
-      let randomMove = _(currentLevel).at(Math.floor(Math.random() * currentLevel.length)).first();
-      buttons = currentLevel.map((text) => {
-        return <MoveItem move={text} key={text} />
+    let items = []
+    let itemsHTML = ''
+    if (_.isArray(this.props.moves)) {
+      items = this.props.moves.map((text) => {
+        return <MoveItem move={text} yourMove={this.props.yourMove} key={text} />
       })
-      buttonsHTML = [
-        <YourMove move={randomMove} key='yourmove' />
-        ,
-        <MovesList items={buttons} key='moveslist'/>
-      ]
+      itemsHTML = <MovesList items={items} key='moveslist'/>
     } else {
-      buttons = _.keys(currentLevel).map((text) => {
+      items = _.keys(this.props.moves).map((text) => {
         return <CategoryLink key={text} choose={this.props.choose} text={text} />
       })
-      buttonsHTML = (
-        <div className='collection'>
-          {buttons}
-        </div>
-      )
+      itemsHTML = <CategoryList items={items} />
     }
 
     return (
       <div className='col s6'>
-        {buttonsHTML}
+        <YourMove move={this.props.yourMove} key='yourmove' />
+        {itemsHTML}
       </div>
     );
   }
+}
 
-  currentLevel() {
-    let currentLevel = movesJSON
-    let previousLevel = this.props.move || []
-    previousLevel.forEach((move) => {
-      currentLevel = currentLevel[move]
-    })
-    return currentLevel;
+class CategoryList {
+  render() {
+    return (
+      <div className='collection'>
+        {this.props.items}
+      </div>
+    )
   }
 }
 
@@ -55,12 +48,16 @@ class CategoryLink {
 
 class YourMove {
   render() {
-    return (
-      <div className="card-panel brown white-text">
-        <span className="card-title">Your Move</span>
-        <p>{this.props.move}</p>
-      </div>
-    )
+    if (_.isEmpty(this.props.move)) {
+      return <div />
+    } else {
+      return (
+        <div className="card-panel brown white-text">
+          <span className="card-title">Your Move</span>
+          <p>{this.props.move}</p>
+        </div>
+      )
+    }
   }
 }
 
@@ -75,9 +72,16 @@ class MovesList {
 }
 
 class MoveItem {
+  classnames() {
+    return classNames(
+      'collection-item',
+      { 'yellow lighten-4': this.props.move === this.props.yourMove }
+    )
+  }
+
   render() {
     return (
-      <li className='collection-item'>{this.props.move}</li>
+      <li className={this.classnames()}>{this.props.move}</li>
     )
   }
 }

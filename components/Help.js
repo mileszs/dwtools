@@ -15,7 +15,7 @@ export default class Help {
 
 class ResetButton {
   render() {
-    if (!_.isEmpty(this.props.move)) {
+    if (!_.isEmpty(this.props.lastChoice)) {
       return (
         <div>
           <div className='divider'></div>

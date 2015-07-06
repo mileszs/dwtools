@@ -6,17 +6,18 @@ import MoveFinder from '../components/MoveFinder';
 import * as MoveActions from '../actions/MoveActions';
 
 @connect(state => ({
-  move: state.move
+  ...state.move
 }))
 
 export default class MoveFinderApp {
   render() {
-    const { move, dispatch } = this.props;
+    console.log(this.props, this.state)
+    const { moves, lastChoice, yourMove, dispatch } = this.props;
     return (
       <div className='row'>
-        <MoveFinder move={move}
+        <MoveFinder moves={moves} lastChoice={lastChoice} yourMove={yourMove}
         {...bindActionCreators(MoveActions, dispatch)} />
-        <Help move={move} {...bindActionCreators(MoveActions, dispatch)} />
+        <Help moves={moves} lastChoice={lastChoice} yourMove={yourMove} {...bindActionCreators(MoveActions, dispatch)} />
       </div>
     );
   }
