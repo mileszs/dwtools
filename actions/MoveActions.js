@@ -1,14 +1,14 @@
-import { CHOOSE, RESET } from '../constants/ActionTypes';
+import { CHOOSE_MOVE, RESET_MOVE, CHOOSE_MONSTER, RESET_MONSTER } from '../constants/ActionTypes';
 
-export function choose(move) {
+export function chooseMove(move) {
   return {
-    type: CHOOSE,
+    type: CHOOSE_MOVE,
     data: move
   };
 }
 
-export function reset() {
+export function resetMove() {
   return {
-    type: RESET
+    type: RESET_MOVE
   };
 }

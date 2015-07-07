@@ -1,5 +1,4 @@
 import React from 'react';
-import movesJSON from '../moves'
 import _ from 'lodash'
 import classNames from 'classnames'
 
@@ -14,7 +13,7 @@ export default class MoveFinder {
       itemsHTML = <MovesList items={items} key='moveslist'/>
     } else {
       items = _.keys(this.props.moves).map((text) => {
-        return <CategoryLink key={text} choose={this.props.choose} text={text} />
+        return <CategoryLink key={text} choose={this.props.chooseMove} text={text} />
       })
       itemsHTML = <CategoryList items={items} />
     }
@@ -41,7 +40,7 @@ class CategoryList {
 class CategoryLink {
   render() {
     return (
-      <a className='collection-item waves-effect waves-light' onClick={_.partial(this.props.choose, this.props.text)}>{this.props.text}</a>
+      <a className='collection-item waves-effect waves-teal' onClick={_.partial(this.props.choose, this.props.text)}>{this.props.text}</a>
     )
   }
 }

@@ -1,5 +1,5 @@
-import { CHOOSE, RESET } from '../constants/ActionTypes';
-import movesJSON from '../moves'
+import { CHOOSE_MOVE, RESET_MOVE } from '../constants/ActionTypes';
+import movesJSON from '../data/moves'
 import _ from 'lodash'
 
 export default function move(state = {}, action) {
@@ -11,7 +11,7 @@ export default function move(state = {}, action) {
    *   yourMove: 'Description'
    * }
    */
-  case CHOOSE:
+  case CHOOSE_MOVE:
     let moves = state.moves[action.data]
     let lastChoice = action.data
     let yourMove = ''
@@ -23,7 +23,7 @@ export default function move(state = {}, action) {
       lastChoice: lastChoice,
       yourMove: yourMove
     };
-  case RESET:
+  case RESET_MOVE:
     return {
       moves: movesJSON,
       lastChoice: '',

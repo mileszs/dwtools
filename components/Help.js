@@ -21,7 +21,7 @@ class ResetButton {
           <div className='divider'></div>
           <div className='section'>
             <p>Want to start over? Just click reset:</p>
-            <p><a onClick={this.props.reset} className='waves-effect waves-light btn'>Reset</a></p>
+            <p><a onClick={this.props.resetMove} className='waves-effect waves-light btn'>Reset</a></p>
           </div>
         </div>
       )

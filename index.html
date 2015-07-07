@@ -4,6 +4,8 @@
     <title>Dungeon World Move Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
     <style>
       body {
         display: flex;
@@ -17,15 +19,42 @@
 
       a { color: #26a69a; }
       a:hover { color: #00796b; }
+
+      h1 { font-family: 'Sigmar One', cursive; }
+      main .row .col.s2.nav-column {
+        padding: 0;
+      }
+      ul.nav li {
+        width: 100%;
+      }
+      ul.nav li a {
+        display: block;
+        font-family: 'Sigmar One', cursive;
+        width: 100%;
+        padding: 10px 0;
+        text-align: left;
+        padding-left: 25px;
+      }
+      ul.nav li a.active {
+        border-right: 5px solid #26a69a;
+        background-color: #e0e0e0;
+      }
+      ul.nav li a:hover {
+        background-color: #e0e0e0;
+      }
+      ul.nav li a i {
+        margin: 0 5px;
+        vertical-align: middle;
+      }
     </style>
   </head>
   <body>
 <a href="https://github.com/mileszs/dw-move-finder"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
-    <main>
-      <div class="container">
-        <div class="section" id="react"></div>
-      </div>
-    </main>
+    <header class="brown grey-text text-lighten-2">
+      <div class="center-align"><h1>Dungeon World Tools</h1></div>
+      <div style="clear: both;"></div>
+    </header>
+    <main id="react"></main>
     <footer class="page-footer brown">
       <div class="container">
         <div class="row">
