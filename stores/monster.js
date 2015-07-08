@@ -8,7 +8,6 @@ export default function monster(state = {}, action) {
    */
   switch (action.type) {
   case CHOOSE_MONSTER:
-    console.log('choosing')
     let monsterList = monstersJSON[action.data]
     let monster = _.sample(monsterList)
     return {
