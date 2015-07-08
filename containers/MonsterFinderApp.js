@@ -1,7 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'redux/react';
-import Monsters from '../components/Monsters';
+import MonsterFinder from '../components/MonsterFinder';
 import * as MonsterActions from '../actions/MonsterActions';
 import _ from 'lodash'
 
@@ -13,7 +13,7 @@ export default class MonsterFinderApp {
   render() {
     const { categories, chosenCategory, monster, dispatch } = this.props
     return (
-      <Monsters categories={categories} chosenCategory={chosenCategory} monster={monster}
+      <MonsterFinder categories={categories} chosenCategory={chosenCategory} monster={monster}
         {...bindActionCreators(MonsterActions, dispatch)} />
     )
   }

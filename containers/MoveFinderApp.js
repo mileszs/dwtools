@@ -4,8 +4,6 @@ import { connect } from 'redux/react';
 import Help from '../components/Help';
 import MoveFinder from '../components/MoveFinder';
 import * as MoveActions from '../actions/MoveActions';
-import Monsters from '../components/Monsters';
-import * as MonsterActions from '../actions/MonsterActions';
 import _ from 'lodash'
 
 @connect(state => ({
