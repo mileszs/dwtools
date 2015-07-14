@@ -1,5 +1,4 @@
 import React from 'react';
-import MoveFinderApp from './MoveFinderApp';
 import * as stores from '../stores';
 import { Link } from 'react-router'
 
@@ -9,11 +8,12 @@ export default class App extends React.Component {
       <div className='row'>
         <div className='col s2 nav-column'>
           <ul className='nav'>
-            <li><Link to='/move-finder'><i className='material-icons'>swap_calls</i>Moves</Link></li>
-            <li><Link to='/monster-finder'><i className='material-icons'>visibility</i>Monsters</Link></li>
+            <li><Link to='/move-finder'><span className="octicon octicon-alignment-aligned-to"></span>Moves</Link></li>
+            <li><Link to='/monster-finder'><span className="octicon octicon-squirrel"></span>Monsters</Link></li>
+            <li><Link to='/monster-maker'><span className="octicon octicon-organization"></span>Monster Maker</Link></li>
           </ul>
         </div>
-        <div className='col s10'>
+        <div id='content' className='col s10'>
           {this.props.children}
         </div>
       </div>
