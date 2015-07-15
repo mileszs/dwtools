@@ -1,8 +1,14 @@
-import { CREATE_MONSTER } from '../constants/ActionTypes';
+import { CHANGE_MONSTER, RESET_MONSTER_MAKER } from '../constants/ActionTypes';
 
-export function chooseMonster(category) {
+export function changeMonster(attrs) {
   return {
-    type: CHOOSE_MONSTER,
-    data: category
+    type: CHANGE_MONSTER,
+    data: attrs
+  }
+}
+
+export function resetMonsterMaker(attrs) {
+  return {
+    type: RESET_MONSTER_MAKER
   }
 }

@@ -1,20 +1,19 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'redux/react';
-import Help from '../components/Help';
 import MonsterMaker from '../components/MonsterMaker';
 import * as MonsterMakerActions from '../actions/MonsterMakerActions';
 import _ from 'lodash'
 
 @connect(state => ({
-  monster: state.monster
+  ...state.monsterMaker
 }))
 
 export default class MoveFinderApp {
   render() {
-    const { dispatch } = this.props;
+    const { attributes, customMonster, dispatch } = this.props
     return (
-      <MonsterMaker
+      <MonsterMaker attributes={attributes} monster={customMonster}
         {...bindActionCreators(MonsterMakerActions, dispatch)} />
     );
   }
