@@ -1,0 +1,78 @@
+body
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+
+main
+  flex: 1 0 auto
+  > div.row
+    margin-bottom: 0
+
+a
+  color: #26a69a
+  &:hover
+    color: #00796b
+
+header
+  h1
+    font-size: 1.5rem
+    font-family: 'Sigmar One', cursive
+    margin: 1.0rem
+  i.fa-github
+    margin: 0 0.8rem
+  a.octicon
+    color: #e0e0e0
+    &:hover
+      color: rgba(224, 224, 224, 0.5)
+
+main
+  .row .col.s2.nav-column
+    padding: 0
+  #content
+    margin-bottom: 0
+    border-left: 1px solid #ddd
+
+ul.nav li
+  width: 100%
+  a
+    display: block
+    font-family: 'Sigmar One', cursive
+    width: 100%
+    padding: 10px 0
+    text-align: left
+    padding-left: 25px
+    color: #999
+    &.active
+      color: #26a69a
+      background-color: rgba(0, 0, 0, 0.03)
+    &:hover
+      background-color: #efefef
+    span.octicon
+      margin: 0 5px
+      vertical-align: middle
+
+main #your-monster
+  h3
+    margin-bottom: 0
+    font-size: 1.5em
+    font-family: 'Sigmar One', cursive
+  ul
+    padding-left: 2em
+    list-style-type: square
+    li
+      list-style-type: square
+
+footer.page-footer
+  margin-top: 0
+  .middle
+    border-left: 1px solid #999
+    border-right: 1px solid #999
+    img
+      margin-top: 25%
+  .me p img
+    margin: 0 20px
+  ul
+    list-style-type: square
+    margin-left: 1.5rem
+    li
+      list-style-type: square

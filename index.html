@@ -4,105 +4,49 @@
     <title>Dungeon World Move Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
-    <link rel="stylesheet" href="/assets/octicons/octicons.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
-    <style>
-      body {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-      }
-
-      main {
-        flex: 1 0 auto;
-      }
-
-      main > div.row {
-        margin-bottom: 0;
-      }
-
-      a { color: #26a69a; }
-      a:hover { color: #00796b; }
-
-      header h1 {
-        font-size: 1.5rem;
-        font-family: 'Sigmar One', cursive;
-        margin: 1.0rem;
-      }
-
-      header span.octicon {
-        font-size: 32px;
-        margin: 0.8rem;
-      }
-
-      header a.octicon {
-        color: #e0e0e0;
-      }
-
-      header a.octicon:hover {
-        color: rgba(224, 224, 224, 0.5);
-      }
-
-      main .row .col.s2.nav-column {
-        padding: 0;
-      }
-      main #content {
-        margin-bottom: 0;
-        border-left: 1px solid #ddd;
-      }
-      ul.nav li {
-        width: 100%;
-      }
-      ul.nav li a {
-        display: block;
-        font-family: 'Sigmar One', cursive;
-        width: 100%;
-        padding: 10px 0;
-        text-align: left;
-        padding-left: 25px;
-        color: #999;
-      }
-      ul.nav li a.active {
-        color: #26a69a;
-        background-color: rgba(0, 0, 0, 0.03)
-      }
-      ul.nav li a:hover {
-        background-color: #efefef;
-      }
-      ul.nav li a span.octicon {
-        margin: 0 5px;
-        vertical-align: middle;
-      }
-      main #your-monster h3 {
-        margin-bottom: 0;
-        font-size: 1.5em;
-        font-family: 'Sigmar One', cursive;
-      }
-      main #your-monster ul {
-        padding-left: 2em;
-        list-style-type: square;
-      }
-      main #your-monster ul li {
-        list-style-type: square;
-      }
-      footer.page-footer {
-        margin-top: 0;
-      }
-    </style>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/main.css">
   </head>
   <body>
     <header class="teal grey-text text-lighten-2">
       <div class="left"><h1>Dungeon World Tools</h1></div>
-      <div class="right"><a href="https://github.com/mileszs/dw-move-finder" class="octicon"><span class="octicon octicon-mark-github"></span></a></div>
+      <div class="right"><a href="https://github.com/mileszs/dw-move-finder" class="octicon"><i class="fa fa-github fa-3x"></i></a></div>
     </header>
     <main id="react"></main>
-    <footer class="page-footer brown darken-2">
+    <footer class="page-footer brown darken-4">
       <div class="container">
-        <div class="row">
-          <div class="col s8 offset-s2 grey-text text-lighten-2 center">
-            <p>Crafted by <a href="http://mileszs.com">MilesZS</a> of <a href="http://www.getfretless.com">Fretless</a>. All content borrowed from the nice folks at <a href="http://www.rpgalchemy.com/">RPG Alchemy</a></p>
+        <div class="row grey-text text-lighten-2">
+          <div class="col s4 me">
+            <p>
+              <img src="/static/images/my-face.png" align="left" />
+              Crafted by <a href="http://mileszs.com">MilesZS</a> of <a href="http://www.getfretless.com">Fretless</a>.
+              <br />
+              Questions? Suggestions? Bug reports? Feature requests? <a href="mailto:miles@mileszs.com">Email me!</a>
+            </p>
           </div>
+          <div class="col s4 middle">
+            <p>Hard Moves content from the nice folks at <a href="http://www.rpgalchemy.com/">RPG Alchemy</a></p>
+            <div class="row">
+              <div class="col s4">
+                <a href="http://www.dungeon-world.com/">
+                  <img src="/static/images/use-with-dw-OnDark-web.png" align="left" />
+                </a>
+              </div>
+              <div class="col s8">
+                <p>
+                  Other content from <a href="http://www.dungeon-world.com/">Dungeon World</a>, released under a Creative Commons Attribution license by Sage LaTorra and Adam Koebel (Sage Kobold Productions).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s4">
+            <p>Need some other tools for Dungeon World? Check these out:</p>
+            <ul>
+              <li><a href="http://rpg-generators.dx.am/dungeonworld.html">Tools for DW and the Fantasy Genre</a></li>
+              <li><a href="http://rpg-generators.dx.am/dungeonworld.html">RPGenerators: Dungeon World</a></li>
+            </ul>
         </div>
       </div>
     </footer>
