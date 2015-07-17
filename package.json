@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node dev-server.js",
-    "build": "webpack --progress --colors && node-sass -w sass/main.sass static/main.sass",
-    "prodbuild": "webpack --config webpack-production.config.js --progress --profile --colors && node-sass -w sass/main.sass static/main.sass"
+    "build": "webpack --progress --colors && ./node_modules/node-sass/bin/node-sass sass/main.sass static/main.css",
+    "prodbuild": "webpack --config webpack-production.config.js --progress --profile --colors && ./node_modules/node-sass/bin/node-sass sass/main.sass static/main.css"
   },
   "repository": {
     "type": "git",
