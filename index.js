@@ -1,9 +1,9 @@
 import React from 'react';
 import Root from './containers/Root';
 import { Router } from 'react-router'
-import BrowserHistory from 'react-router/lib/BrowserHistory'
+import HashHistory from 'react-router/lib/HashHistory'
 
-const history = new BrowserHistory()
+const history = new HashHistory()
 
 React.render(
   <Root history={history} />,
