@@ -99,7 +99,7 @@ export default class MonsterMaker extends React.Component {
             <AttributeCheckbox label="It lets the monster keep others at bay" domId='keeps_others_at_bay' handleCheckboxToggle={_.partial(this.handleCheckboxToggle, 'keeps_others_at_bay')} isChecked={this.props.attributes.keeps_others_at_bay} />
             <AttributeCheckbox label="Its armaments are small and weak" domId='armaments_are_small_and_weak' handleCheckboxToggle={_.partial(this.handleCheckboxToggle, 'armaments_are_small_and_weak')} isChecked={this.props.attributes.armaments_are_small_and_weak} />
             <AttributeCheckbox label="Its armaments can slice or pierce metal" domId='armaments_can_slice_pierce_metal' handleCheckboxToggle={_.partial(this.handleCheckboxToggle, 'armaments_can_slice_pierce_metal')} isChecked={this.props.attributes.armaments_can_slice_pierce_metal} />
-            <AttributeCheckbox label="If checked that it can slice or pierce metal, it can also tear metal apart" domId='armaments_can_tear_metal_apart' handleCheckboxToggle={_.partial(this.handleCheckboxToggle, 'armaments_can_tear_metal_apart')} isChecked={this.props.attributes.armaments_can_tear_metal_apart} />
+            <AttributeCheckbox label="It can just tear metal apart" domId='armaments_can_tear_metal_apart' handleCheckboxToggle={_.partial(this.handleCheckboxToggle, 'armaments_can_tear_metal_apart')} isChecked={this.props.attributes.armaments_can_tear_metal_apart} />
             <AttributeCheckbox label="Armor doesn't help with the damage it deals" domId='armor_wont_help' handleCheckboxToggle={_.partial(this.handleCheckboxToggle, 'armor_wont_help')} isChecked={this.props.attributes.armor_wont_help} />
             <AttributeCheckbox label="It usually attacks at range (near)" domId='attacks_at_range_near' handleCheckboxToggle={_.partial(this.handleCheckboxToggle, 'attacks_at_range_near')} isChecked={this.props.attributes.attacks_at_range_near} />
             <AttributeCheckbox label="It usually attacks at range (far)" domId='attacks_at_range_far' handleCheckboxToggle={_.partial(this.handleCheckboxToggle, 'attacks_at_range_far')} isChecked={this.props.attributes.attacks_at_range_far} />
@@ -121,6 +121,8 @@ export default class MonsterMaker extends React.Component {
           </div>
         </div>
         <div className='col s6'>
+          <p>The Monster Maker is very similar to the <a href="http://codex.dungeon-world.com/">Dungeon World Codex</a> monster form, except it updates the monster attributes in real-time, and you don't have to submit it, or share it with anyone. Well, right now, you just can't submit it or share it with anyone. Sorry.</p>
+          <p>Anyway, it's helped me. I hope it helps you.</p>
           <YourMonster monster={this.props.monster} handleReset={this.handleReset} />
         </div>
       </div>
