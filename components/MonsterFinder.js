@@ -21,6 +21,7 @@ export default class Monsters {
           </div>
         </div>
         <div className='col s6'>
+          <p>The Monster Finder provides a random monster's name and the page number at which it can be found in the Dungeon World manual. I hope to add to this, providing links to the SRD, perhaps eventually full stat blocks. Check back once in a while!</p>
           {monster}
         </div>
       </div>
