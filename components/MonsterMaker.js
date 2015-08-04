@@ -35,7 +35,7 @@ export default class MonsterMaker extends React.Component {
   render() {
     return (
       <div className='row'>
-        <div className='col s6'>
+        <div className='col m6 s12'>
           <div>
             <label>What do you call it?</label>
             <input type="text" onChange={_.partial(this.handleChange, 'called')} value={this.props.attributes.called} />
@@ -120,7 +120,7 @@ export default class MonsterMaker extends React.Component {
             <AttributeCheckbox label="It abhors violence" domId='abhors_violence' handleCheckboxToggle={_.partial(this.handleCheckboxToggle, 'abhors_violence')} isChecked={this.props.attributes.abhors_violence} />
           </div>
         </div>
-        <div className='col s6'>
+        <div className='col m6 s12'>
           <p>The Monster Maker is very similar to the <a href="http://codex.dungeon-world.com/">Dungeon World Codex</a> monster form, except it updates the monster attributes in real-time, and you don't have to submit it, or share it with anyone. Well, right now, you just can't submit it or share it with anyone. Sorry.</p>
           <p>Anyway, it's helped me. I hope it helps you.</p>
           <YourMonster monster={this.props.monster} handleReset={this.handleReset} />

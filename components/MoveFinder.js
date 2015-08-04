@@ -19,7 +19,7 @@ export default class MoveFinder {
     }
 
     return (
-      <div className='col s6'>
+      <div className='col m6 s12'>
         <YourMove move={this.props.yourMove} key='yourmove' />
         {itemsHTML}
       </div>

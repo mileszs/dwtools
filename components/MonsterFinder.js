@@ -15,12 +15,12 @@ export default class Monsters {
 
     return (
       <div className='row'>
-        <div className='col s6'>
+        <div className='col m6 s12'>
           <div className='collection'>
             {items}
           </div>
         </div>
-        <div className='col s6'>
+        <div className='col m6 s12'>
           <p>The Monster Finder provides a random monster's name and the page number at which it can be found in the Dungeon World manual. I hope to add to this, providing links to the SRD, perhaps eventually full stat blocks. Check back once in a while!</p>
           {monster}
         </div>
