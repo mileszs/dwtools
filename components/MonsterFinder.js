@@ -6,7 +6,7 @@ import classNames from 'classnames'
 export default class Monsters {
   render() {
     let items = this.props.categories.map((item) => {
-      return <a key={item} className='collection-item waves-effect waves-light' onClick={_.partial(this.props.chooseMonster, item)}>{item}</a>
+      return <a key={item} className='collection-item waves-effect waves-light' onClick={_.partial(this.props.chooseMonster, item)} href='#'>{item}</a>
     })
     let monster = ''
     if (this.props.monster) {
