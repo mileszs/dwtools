@@ -40,7 +40,7 @@ class CategoryList {
 class CategoryLink {
   render() {
     return (
-      <a className='collection-item' onClick={_.partial(this.props.choose, this.props.text)}>{this.props.text}</a>
+      <a className='collection-item' onClick={_.partial(this.props.choose, this.props.text)} href='#'>{this.props.text}</a>
     )
   }
 }
