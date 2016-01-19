@@ -1,4 +1,4 @@
-import { CHOOSE_MOVE, RESET_MOVE, CHOOSE_MONSTER, RESET_MONSTER } from '../constants/ActionTypes';
+import { CHOOSE_MOVE, RESET_MOVE } from '../constants/ActionTypes';
 
 export function chooseMove(move) {
   return {
