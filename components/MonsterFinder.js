@@ -37,7 +37,7 @@ class YourMonster {
       return (
         <div className="card-panel brown white-text">
           <span className="card-title">Your Monster</span>
-          <p><strong>{this.props.monster.name}</strong>: p{this.props.monster.page}</p>
+          <p><strong>{this.props.monster.name}</strong>: p{this.props.monster.page} &nbsp;<a href={this.props.monster.url} target="_blank"><i className="fa fa-external-link" title="Link to Dungeon World SRD"/></a></p>
         </div>
       )
     }
