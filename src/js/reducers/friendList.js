@@ -71,6 +71,7 @@ export default function (state = initialState, action) {
       };
 
     default:
+      console.log('state', state)
       return state;
   }
 }
