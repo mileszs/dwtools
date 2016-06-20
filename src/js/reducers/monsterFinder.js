@@ -22,7 +22,6 @@ export default function (state = initialState, action) {
   switch (action.type) {
     case types.CHOOSE_MONSTER: {
       let monster = _.sample(monstersJSON[action.data])
-      console.log('monster list', monster)
       return {
         categories: _.keys(monstersJSON),
         chosenCategory: action.data,
@@ -30,7 +29,6 @@ export default function (state = initialState, action) {
       };
     }
     default:
-      console.log('state', state)
       return state;
   }
 }
