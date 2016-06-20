@@ -1,5 +1,3 @@
-
-
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -14,8 +12,6 @@ class MonsterFinderApp extends Component {
   }
 
   render() {
-    console.log('props', this.props)
-    console.log('state', this.state)
     const { actions, dispatch } = this.props
     const { categories, chosenCategory, monster } = this.props.monsterFinder
     return (
@@ -25,7 +21,6 @@ class MonsterFinderApp extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log('state in mapStateToProps', state.monsterFinder)
   return {
     monsterFinder: state.monsterFinder
   };
