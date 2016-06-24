@@ -7,6 +7,7 @@ export default class App extends Component {
   };
 
   render() {
+    console.log('props in app.js', this.props)
     return (
       <div className="page-container">
         <Navbar inverse>

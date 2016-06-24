@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import friendList from './friendList';
 import monsterFinder from './monsterFinder';
+import moveFinder from './moveFinder';
 
 const rootReducer = combineReducers({
-  friendList,
-  monsterFinder
+  monsterFinder,
+  moveFinder
 });
 
 export default rootReducer;
