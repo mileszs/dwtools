@@ -17,7 +17,7 @@ export default class MoveFinder extends Component {
       })
       itemsHTML = <CategoryList items={items} />
     }
-
+    console.log(this.props.actions)
     return (
       <div className='row'>
         <div className='col-md-12'>
@@ -32,7 +32,7 @@ export default class MoveFinder extends Component {
         <div className='col-md-6'>
           {itemsHTML}
         </div>
-        <YourMove move={this.props.yourMove} key='yourmove' />
+        <YourMove resetMove={this.props.actions.resetMove} move={this.props.yourMove} key='yourmove' />
       </div>
     );
   }
@@ -63,9 +63,16 @@ class YourMove extends Component {
     } else {
       return (
         <div className='col-md-6'>
-          <div className="card-panel brown white-text">
-            <span className="card-title">Your Move</span>
-            <p>{this.props.move}</p>
+          <div className="panel panel-default">
+            <div className="panel-heading">
+              <h3>Your Move</h3>
+            </div>
+            <div className="panel-body">
+              <p>{this.props.move}</p>
+            </div>
+            <div className="panel-footer">
+              <a href="#" onClick={this.props.resetMove}>Reset</a>
+            </div>
           </div>
         </div>
       )

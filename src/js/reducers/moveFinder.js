@@ -32,7 +32,7 @@ export default function (state = initialState, action) {
   case types.RESET_MOVE:
     return {
       moves: movesJSON,
-      lastChoice: '',
+      lastChoice: [],
       yourMove: ''
     };
   default:
