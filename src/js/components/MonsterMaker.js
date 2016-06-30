@@ -122,8 +122,10 @@ export default class MonsterMaker extends Component {
           </form>
         </div>
         <div className='col-md-6'>
-          <p>The Monster Maker is very similar to the <a href="http://codex.dungeon-world.com/">Dungeon World Codex</a> monster form, except it updates the monster attributes in real-time, and you don't have to submit it, or share it with anyone. Well, right now, you just can't submit it or share it with anyone. Sorry.</p>
-          <p>Anyway, it's helped me. I hope it helps you.</p>
+          <div className='well'>
+            <p>The Monster Maker is very similar to the <a href="http://codex.dungeon-world.com/">Dungeon World Codex</a> monster form, except it updates the monster attributes in real-time, and you don't have to submit it, or share it with anyone. Well, right now, you just can't submit it or share it with anyone. Sorry.</p>
+            <p>Anyway, it's helped me. I hope it helps you.</p>
+          </div>
           <YourMonster monster={this.props.monster} handleReset={this.handleReset} />
         </div>
       </div>
@@ -151,8 +153,7 @@ class AttributeCheckbox extends Component {
 
 class YourMonster extends React.Component {
   render() {
-    let { monster } = this.props
-    console.log(monster)
+    let { monster, handleReset} = this.props
     return (
       <div className="panel panel-info">
         <div className="panel-heading">
@@ -165,6 +166,9 @@ class YourMonster extends React.Component {
           <p><strong>Instinct:</strong> {monster.instinct}</p>
           <p><strong>Special Qualities:</strong> {monster.special_qualities.join(', ')}</p>
           <MonsterMovesList moves={monster.moves} />
+        </div>
+        <div className='panel-footer'>
+          <p><a href="#" onClick={handleReset}>Reset</a></p>
         </div>
       </div>
     )
