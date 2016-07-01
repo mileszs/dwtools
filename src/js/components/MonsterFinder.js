@@ -19,15 +19,15 @@ export default class MonsterFinder extends Component {
 
     return (
       <div className='row'>
-        <div className='col-md-12'>
-          <p>The Monster Finder allows you to randomly get a monster from one of the categories in the core rulebook, see its full stats and description, as well as a page number and link to the Dungeon World SRD.</p>
-        </div>
         <div className='col-md-4'>
           <div className='list-group'>
             {items}
           </div>
         </div>
         <div className='col-md-8'>
+          <div className='well'>
+            <p>The Monster Finder allows you to randomly get a monster from one of the categories in the core rulebook, see its full stats and description, as well as a page number and link to the Dungeon World SRD.</p>
+          </div>
           {monster}
         </div>
       </div>

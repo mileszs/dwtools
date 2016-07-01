@@ -11,7 +11,9 @@ import NotFoundView from './views/NotFoundView';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={MonsterMakerApp} />
-    <Route path="move-finder" component={MonsterMakerApp} />
+    <Route path="move-finder" component={MoveFinderApp} />
+    <Route path="monster-maker" component={MonsterMakerApp} />
+    <Route path="monster-finder" component={MonsterFinderApp} />
     <Route path="404" component={NotFoundView} />
     <Redirect from="*" to="404" />
   </Route>
