@@ -1,5 +1,3 @@
-import './FriendList.scss';
-
 import React, { Component, PropTypes } from 'react';
 
 import FriendListItem from '../FriendListItem/FriendListItem';

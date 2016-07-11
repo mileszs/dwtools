@@ -45,7 +45,7 @@ module.exports = {
   },
   resolve: {
     // We can now require('file') instead of require('file.jsx')
-    extensions: ['', '.js', '.jsx', '.scss']
+    extensions: ['', '.js', '.jsx', '.scss', '.sass']
   },
   module: {
     loaders: [
@@ -59,12 +59,36 @@ module.exports = {
         loader: sassLoaders.join('!')
       },
       {
+        test: /\.sass$/,
+        loader: sassLoaders.join('!')
+      },
+      {
         test: /\.css$/,
         loader: 'style-loader!css-loader!postcss-loader'
       },
+      {
+        test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&minetype=application/font-woff"
+      },
+      {
+        test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&minetype=application/font-woff"
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&minetype=application/octet-stream"
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file"
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&minetype=image/svg+xml"
+      },
       // Inline base64 URLs for <=8k images, direct URLs for the rest
       {
-        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+        test: /\.(png|jpg|jpeg|gif)$/,
         loader: 'url-loader?limit=8192'
       }
     ]
@@ -74,6 +98,9 @@ module.exports = {
     return [autoprefixer({
       browsers: ['last 2 versions']
     })];
+  },
+  sassLoader: {
+    indentedSyntax: true
   },
   devServer: {
     contentBase: path.resolve(__dirname, '../src'),

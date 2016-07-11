@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import { Button, Glyphicon } from 'react-bootstrap'
 import classNames from 'classnames'
 import _ from 'lodash'
 
@@ -168,7 +169,7 @@ class YourMonster extends React.Component {
           <MonsterMovesList moves={monster.moves} />
         </div>
         <div className='panel-footer'>
-          <p><a href="#" onClick={handleReset}>Reset</a></p>
+          <a href="#" onClick={handleReset}><Glyphicon glyph="refresh" /> Reset</a>
         </div>
       </div>
     )

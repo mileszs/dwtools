@@ -8,32 +8,32 @@ export default class App extends Component {
   };
 
   render() {
-    console.log('props in app.js', this.props)
     return (
-      <div className="page-container">
-        <Navbar>
+      <div>
+        <Navbar inverse fixedTop>
           <Navbar.Header>
             <Navbar.Brand>
               <a href="/">Dungeon World Tools</a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
-          <Nav>
-            <LinkContainer to={`/monster-finder`}>
-              <NavItem>Monster Finder</NavItem>
-            </LinkContainer>
-            <LinkContainer to={`/monster-maker`}>
-              <NavItem>Monster Maker</NavItem>
-            </LinkContainer>
-            <LinkContainer to={`/move-finder`}>
-              <NavItem>Move Finder</NavItem>
-            </LinkContainer>
-          </Nav>
-          <Nav pullRight>
-            <NavItem href="https://github.com/mileszs/dw-move-finder">On GitHub</NavItem>
-          </Nav>
+          <Navbar.Collapse>
+            <Nav>
+              <LinkContainer to={`/monster-finder`}>
+                <NavItem>Monster Finder</NavItem>
+              </LinkContainer>
+              <LinkContainer to={`/monster-maker`}>
+                <NavItem>Monster Maker</NavItem>
+              </LinkContainer>
+              <LinkContainer to={`/move-finder`}>
+                <NavItem>Move Finder</NavItem>
+              </LinkContainer>
+            </Nav>
+          </Navbar.Collapse>
         </Navbar>
-        {this.props.children}
+        <div className="container" id="main">
+          {this.props.children}
+        </div>
       </div>
     )
   }

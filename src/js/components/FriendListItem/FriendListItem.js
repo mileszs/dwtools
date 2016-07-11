@@ -1,5 +1,3 @@
-import './FriendListItem.scss';
-
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 

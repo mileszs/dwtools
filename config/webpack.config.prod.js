@@ -60,7 +60,7 @@ module.exports = {
   },
   resolve: {
     // We can now require('file') instead of require('file.jsx')
-    extensions: ['', '.js', '.jsx', '.scss']
+    extensions: ['', '.js', '.jsx', '.scss', '.sass']
   },
   module: {
     noParse: /\.min\.js$/,
@@ -71,6 +71,10 @@ module.exports = {
         include: PATHS.app
       },
       {
+        test: /\.sass/,
+        loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
+      },
+      {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
       },
@@ -79,14 +83,30 @@ module.exports = {
         include: PATHS.styles,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
       },
+      {
+        test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&minetype=application/font-woff"
+      },
+      {
+        test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&minetype=application/font-woff"
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&minetype=application/octet-stream"
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file"
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url?limit=10000&minetype=image/svg+xml"
+      },
       // Inline base64 URLs for <=8k images, direct URLs for the rest
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
         loader: 'url-loader?limit=8192&name=images/[name].[ext]?[hash]'
-      },
-      {
-        test: /\.(woff|woff2)$/,
-        loader: 'url-loader?limit=8192&name=fonts/[name].[ext]?[hash]'
       }
     ]
   },
@@ -95,6 +115,9 @@ module.exports = {
     return [autoprefixer({
       browsers: ['last 2 versions']
     })];
+  },
+  sassLoader: {
+    indentedSyntax: true
   },
   devtool: 'source-map'
 };

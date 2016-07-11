@@ -1,5 +1,3 @@
-import './AddFriendInput.scss';
-
 import React, { Component, PropTypes } from 'react';
 
 export default class AddFriendInput extends Component {
