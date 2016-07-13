@@ -10,7 +10,7 @@ import NotFoundView from './views/NotFoundView';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={MonsterMakerApp} />
+    <IndexRoute component={MonsterFinderApp} />
     <Route path="move-finder" component={MoveFinderApp} />
     <Route path="monster-maker" component={MonsterMakerApp} />
     <Route path="monster-finder" component={MonsterFinderApp} />
