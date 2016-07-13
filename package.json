@@ -30,7 +30,8 @@
     "lint": "eslint config src/js/** --ext .js",
     "jscs": "jscs src/js/",
     "test": "mocha --compilers js:babel-core/register,css:./test/unit/cssNullCompiler.js --require ./test/unit/testHelper.js --recursive ./test/unit",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "build:pages": "node ./bin/pages_build.js"
   },
   "devDependencies": {
     "babel-core": "6.7.7",
@@ -49,6 +50,7 @@
     "eslint-plugin-react": "5.0.1",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.5",
+    "gh-pages": "0.11.0",
     "jquery": "2.2.2",
     "jscs": "2.10.1",
     "jsdom": "8.2.0",
