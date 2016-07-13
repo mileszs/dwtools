@@ -73,7 +73,7 @@ class YourMove extends Component {
             <p>{this.props.move}</p>
           </div>
           <div className="panel-footer">
-            <a href="#" onClick={this.props.resetMove}><Glyphicon glyph="refresh" /> Reset</a>
+            <a href="#" onClick={this.props.resetMove}>Reset</a>
           </div>
         </div>
       )

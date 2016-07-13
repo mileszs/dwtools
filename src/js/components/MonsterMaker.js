@@ -169,7 +169,7 @@ class YourMonster extends React.Component {
           <MonsterMovesList moves={monster.moves} />
         </div>
         <div className='panel-footer'>
-          <a href="#" onClick={handleReset}><Glyphicon glyph="refresh" /> Reset</a>
+          <a href="#" onClick={handleReset}>Reset</a>
         </div>
       </div>
     )
