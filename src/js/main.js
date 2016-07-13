@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore  from './store/configureStore';
-import { Route, IndexRoute, Redirect, Router, browserHistory } from 'react-router';
+import { Route, IndexRoute, Redirect, Router, hashHistory } from 'react-router';
 
 // import routes from './routes';
 
@@ -26,9 +26,9 @@ if (process.env.NODE_ENV !== 'production') {
   // If using routes
   ComponentEl = (
     <div>
-      <Router history={browserHistory}>
+      <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <IndexRoute component={MonsterMakerApp} />
+          <IndexRoute component={MonsterFinderApp} />
           <Route path="move-finder" component={MoveFinderApp} />
           <Route path="monster-maker" component={MonsterMakerApp} />
           <Route path="monster-finder" component={MonsterFinderApp} />
@@ -42,9 +42,9 @@ if (process.env.NODE_ENV !== 'production') {
 } else {
   ComponentEl = (
     <div>
-      <Router history={browserHistory}>
+      <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <IndexRoute component={MonsterMakerApp} />
+          <IndexRoute component={MonsterFinderApp} />
           <Route path="move-finder" component={MoveFinderApp} />
           <Route path="monster-maker" component={MonsterMakerApp} />
           <Route path="monster-finder" component={MonsterFinderApp} />
