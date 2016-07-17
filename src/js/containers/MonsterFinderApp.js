@@ -13,9 +13,9 @@ class MonsterFinderApp extends Component {
 
   render() {
     const { actions, dispatch } = this.props
-    const { categories, chosenCategory, monster } = this.props.monsterFinder
+    const { categories, chosenCategory, chosenMonster, monsters } = this.props.monsterFinder
     return (
-      <MonsterFinder categories={categories} chosenCategory={chosenCategory} monster={monster} actions={actions} />
+      <MonsterFinder categories={categories} chosenCategory={chosenCategory} chosenMonster={chosenMonster} monsters={monsters} actions={actions} />
     )
   }
 }

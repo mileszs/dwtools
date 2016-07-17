@@ -19,15 +19,24 @@ const initialState = {
 }
 
 export default function (state = initialState, action) {
+  const monsters = monstersJSON[action.category]
   switch (action.type) {
-    case types.CHOOSE_MONSTER: {
-      let monster = _.sample(monstersJSON[action.data])
+    case types.CHOOSE_MONSTER:
+      const monster = _.find(monstersJSON[action.category], (monster)=> {
+        return monster.name === action.monster
+      })
       return {
         categories: _.keys(monstersJSON),
-        chosenCategory: action.data,
-        monster: monster
-      };
-    }
+        chosenCategory: action.category,
+        chosenMonster: monster,
+        monsters: monsters
+      }
+    case types.CHOOSE_CATEGORY:
+      return {
+        categories: _.keys(monstersJSON),
+        chosenCategory: action.category,
+        monsters: monsters
+      }
     default:
       return state;
   }
