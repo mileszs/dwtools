@@ -3,6 +3,8 @@ import { Panel } from 'react-bootstrap'
 import classNames from 'classnames'
 import _ from 'lodash'
 
+import Help from './Help'
+
 export default class MonsterFinder extends Component {
   render() {
     let items = this.props.categories.map((item) => {
@@ -24,7 +26,7 @@ export default class MonsterFinder extends Component {
           key={index} />
       )
     }
-
+    console.log("actual help", Help)
     return (
       <div className='row'>
         <div className='col-md-4'>
@@ -33,9 +35,9 @@ export default class MonsterFinder extends Component {
           </div>
         </div>
         <div className='col-md-8'>
-          <div className='well'>
+          <Help>
             <p>The Monster Finder allows you to easily peruse the monsters from each of the categories in the core rulebook. See the monster's full stats and description, as well as the page number for the monster in the core book.</p>
-          </div>
+          </Help>
           {monsters}
         </div>
       </div>

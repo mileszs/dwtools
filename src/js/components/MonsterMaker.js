@@ -3,6 +3,8 @@ import { Button, Glyphicon } from 'react-bootstrap'
 import classNames from 'classnames'
 import _ from 'lodash'
 
+import Help from './Help'
+
 function capitalizedTags(tags) {
   return _.map(tags, tag => _.capitalize(tag))
 }
@@ -123,10 +125,10 @@ export default class MonsterMaker extends Component {
           </form>
         </div>
         <div className='col-md-6'>
-          <div className='well'>
+          <Help>
             <p>The Monster Maker is very similar to the <a href="http://codex.dungeon-world.com/">Dungeon World Codex</a> monster form, except it updates the monster attributes in real-time, and you don't have to submit it, or share it with anyone. Well, right now, you just can't submit it or share it with anyone. Sorry.</p>
             <p>Anyway, it's helped me. I hope it helps you.</p>
-          </div>
+          </Help>
           <YourMonster monster={this.props.monster} handleReset={this.handleReset} />
         </div>
       </div>
