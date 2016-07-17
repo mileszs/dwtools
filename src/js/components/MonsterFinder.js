@@ -64,17 +64,15 @@ class Monster extends Component {
       const title = (
         <h3 onClick={this.handleTitleClick}>{caret} {monster.name}</h3>
       )
-      const footer = (
-        <small>p{monster.page}</small>
-      )
       return (
-        <Panel header={title} footer={footer} collapsible expanded={expanded} bsStyle={style}>
+        <Panel header={title} collapsible expanded={expanded} bsStyle={style}>
           <p><em>{monster.monster_tags}</em></p>
           <p>{monster.attack}; ({monster.damage}); {monster.hp} HP; {monster.armor};</p>
           <p><em>{monster.attack_tags}</em></p>
           <p><strong>Special Qualities:</strong> {monster.special_qualities}</p>
           <p><em>{monster.description} Instinct: {monster.instinct}</em></p>
           <ul>{moves}</ul>
+          <p><small>p{monster.page}</small></p>
         </Panel>
       )
     }
