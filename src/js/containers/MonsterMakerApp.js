@@ -12,7 +12,6 @@ class MonsterMakerApp extends Component {
   }
 
   render() {
-    console.log(this.props)
     const { actions, dispatch } = this.props
     const { attributes, customMonster } = this.props.monsterMaker
     return <MonsterMaker attributes={attributes} monster={customMonster} actions={actions} />

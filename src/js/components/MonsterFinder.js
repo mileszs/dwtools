@@ -26,7 +26,6 @@ export default class MonsterFinder extends Component {
           key={index} />
       )
     }
-    console.log("actual help", Help)
     return (
       <div className='row'>
         <div className='col-md-4'>
