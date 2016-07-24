@@ -24,7 +24,7 @@ const plugins = [
 const sassLoaders = [
   'style-loader',
   'css-loader?sourceMap',
-  'postcss-loader',
+  'resolve-url',
   'sass-loader?outputStyle=expanded'
 ];
 
@@ -64,7 +64,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader!postcss-loader'
+        loader: 'style-loader!css-loader!resolve-url!'
       },
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
@@ -94,11 +94,6 @@ module.exports = {
     ]
   },
   plugins: plugins,
-  postcss: function () {
-    return [autoprefixer({
-      browsers: ['last 2 versions']
-    })];
-  },
   sassLoader: {
     indentedSyntax: true
   },

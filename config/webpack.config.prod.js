@@ -40,9 +40,10 @@ const plugins = [
 ];
 
 const sassLoaders = [
+  'style-loader',
   'css-loader?sourceMap',
-  'postcss-loader',
-  'sass-loader?outputStyle=compressed'
+  'resolve-url',
+  'sass-loader?outputStyle=expanded'
 ];
 
 module.exports = {
@@ -81,7 +82,7 @@ module.exports = {
       {
         test: /\.css$/,
         include: PATHS.styles,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!resolve-url')
       },
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
