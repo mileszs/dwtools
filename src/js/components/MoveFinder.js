@@ -53,14 +53,29 @@ class CategoryList extends Component {
 }
 
 class CategoryLink extends Component {
+  constructor(props) {
+    super(props)
+    this.handleCategoryClick = this.handleCategoryClick.bind(this)
+  }
+
   render() {
     return (
-      <a className='list-group-item' key={this.props.text} onClick={_.partial(this.props.choose, this.props.text)} href='#'>{this.props.text}</a>
+      <a className='list-group-item' key={this.props.text} onClick={_.partial(this.handleCategoryClick, this.props.text)} href='#'>{this.props.text}</a>
     )
+  }
+
+  handleCategoryClick(item, e) {
+    e.preventDefault()
+    this.props.choose(item)
   }
 }
 
 class YourMove extends Component {
+  constructor(props) {
+    super(props)
+    this.handleResetClick = this.handleResetClick.bind(this)
+  }
+
   render() {
     if (_.isEmpty(this.props.move)) {
       return <div />
@@ -74,11 +89,16 @@ class YourMove extends Component {
             <p>{this.props.move}</p>
           </div>
           <div className="panel-footer">
-            <a href="#" onClick={this.props.resetMove}><i className='fa fa-refresh' /> Reset</a>
+            <a href="#" onClick={this.handleResetClick}><i className='fa fa-refresh' /> Reset</a>
           </div>
         </div>
       )
     }
+  }
+
+  handleResetClick(e) {
+    e.preventDefault()
+    this.props.resetMove()
   }
 }
 

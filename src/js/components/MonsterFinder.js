@@ -6,6 +6,11 @@ import _ from 'lodash'
 import Help from './Help'
 
 export default class MonsterFinder extends Component {
+  constructor(props) {
+    super(props)
+    this.handleCategoryClick = this.handleCategoryClick.bind(this)
+  }
+
   render() {
     let items = this.props.categories.map((item) => {
       const active = this.props.chosenCategory === item ? 'active' : ''
@@ -13,7 +18,7 @@ export default class MonsterFinder extends Component {
         'list-group-item': true,
         'active': this.props.chosenCategory === item
       })
-      return <a key={item} className={itemClass} onClick={_.partial(this.props.actions.chooseCategory, item)} href='#'>{item}</a>
+      return <a key={item} className={itemClass} onClick={_.partial(this.handleCategoryClick, item)} href='#'>{item}</a>
     })
     let monsters = []
     if (this.props.monsters) {
@@ -41,6 +46,11 @@ export default class MonsterFinder extends Component {
         </div>
       </div>
     )
+  }
+
+  handleCategoryClick(item, e) {
+    e.preventDefault()
+    this.props.actions.chooseCategory(item)
   }
 }
 

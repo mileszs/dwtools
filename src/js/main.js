@@ -9,7 +9,6 @@ import { Route, IndexRoute, Redirect, Router, hashHistory } from 'react-router';
 // import routes from './routes';
 
 import App from './components/App';
-import FriendListApp from './containers/FriendListApp/FriendListApp';
 import MonsterFinderApp from './containers/MonsterFinderApp';
 import MoveFinderApp from './containers/MoveFinderApp';
 import MonsterMakerApp from './containers/MonsterMakerApp';
@@ -28,7 +27,7 @@ if (process.env.NODE_ENV !== 'production') {
     <div>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <IndexRoute component={MonsterFinderApp} />
+          <IndexRoute component={MoveFinderApp} />
           <Route path="move-finder" component={MoveFinderApp} />
           <Route path="monster-maker" component={MonsterMakerApp} />
           <Route path="monster-finder" component={MonsterFinderApp} />
@@ -44,7 +43,7 @@ if (process.env.NODE_ENV !== 'production') {
     <div>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <IndexRoute component={MonsterFinderApp} />
+          <IndexRoute component={MoveFinderApp} />
           <Route path="move-finder" component={MoveFinderApp} />
           <Route path="monster-maker" component={MonsterMakerApp} />
           <Route path="monster-finder" component={MonsterFinderApp} />
