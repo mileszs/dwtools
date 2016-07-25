@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore  from './store/configureStore';
-import { Route, IndexRoute, Redirect, Router, hashHistory } from 'react-router';
+import { Route, IndexRedirect, Redirect, Router, hashHistory } from 'react-router';
 
 // import routes from './routes';
 
@@ -27,7 +27,7 @@ if (process.env.NODE_ENV !== 'production') {
     <div>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <IndexRoute component={MoveFinderApp} />
+          <IndexRedirect to='/monster-finder' />
           <Route path="move-finder" component={MoveFinderApp} />
           <Route path="monster-maker" component={MonsterMakerApp} />
           <Route path="monster-finder" component={MonsterFinderApp} />
@@ -43,7 +43,7 @@ if (process.env.NODE_ENV !== 'production') {
     <div>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <IndexRoute component={MoveFinderApp} />
+          <IndexRedirect to='/monster-finder' />
           <Route path="move-finder" component={MoveFinderApp} />
           <Route path="monster-maker" component={MonsterMakerApp} />
           <Route path="monster-finder" component={MonsterFinderApp} />

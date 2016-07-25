@@ -19,13 +19,13 @@ export default class App extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              <LinkContainer to={`/monster-finder`}>
+              <LinkContainer to={{ pathname: '/monster-finder'}}>
                 <NavItem>Monster Finder</NavItem>
               </LinkContainer>
-              <LinkContainer to={`/monster-maker`}>
+              <LinkContainer to={{ pathname: '/monster-maker'}}>
                 <NavItem>Monster Maker</NavItem>
               </LinkContainer>
-              <LinkContainer to={`/move-finder`}>
+              <LinkContainer to={{ pathname: '/move-finder'}}>
                 <NavItem>Move Finder</NavItem>
               </LinkContainer>
             </Nav>
