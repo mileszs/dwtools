@@ -171,7 +171,7 @@ class YourMonster extends React.Component {
           <MonsterMovesList moves={monster.moves} />
         </div>
         <div className='panel-footer'>
-          <a href="#" onClick={handleReset}>Reset</a>
+          <a href="#" onClick={handleReset}><i className='fa fa-refresh' /> Reset</a>
         </div>
       </div>
     )
