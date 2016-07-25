@@ -4,6 +4,7 @@ $dark-brown: #50322d
 $inverse-text-color: $medium-gray
 $navbar-inverse-bg: $dark-brown
 $navbar-inverse-link-active-bg: darken($navbar-inverse-bg, 8%)
+$footer-height: 200px
 
 $icon-font-path: "/node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap"
@@ -29,7 +30,7 @@ div
   &> div
     overflow:auto
     // this needs to be bigger than footer height
-    padding-bottom: 185px
+    padding-bottom: $footer-height
 
 .navbar-default, .navbar
   border-radius: 0
@@ -52,8 +53,8 @@ div
 
 footer
   position: relative
-  margin-top: -185px // negative value of footer height
-  height: 185px
+  margin-top: -$footer-height // negative value of footer height
+  height: $footer-height
   clear: both
   background-color: $dark-brown
   color: $inverse-text-color
@@ -68,6 +69,16 @@ footer
     margin-left: 1.5rem
     li
       list-style-type: square
+
+  .sub-footer
+    width: 100%
+    margin: 15px 0 0 0
+    padding: 20px
+    background-color: darken($dark-brown, 8%)
+    font-family: 'Sigmar One', cursive
+
+    p
+      margin: 0
 
 // misc
 select:not([multiple])
