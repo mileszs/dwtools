@@ -14,4 +14,5 @@ At some point, I'll have fuller thoughts on Redux here. For now, though, I remai
 
 ## History
 
++ v2.0 - Bashful Bakunawa
 + v1.0 - Aloof Aboleth
