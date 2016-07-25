@@ -158,7 +158,7 @@ class YourMonster extends React.Component {
   render() {
     let { monster, handleReset} = this.props
     return (
-      <div className="panel panel-info">
+      <div id="your-monster" className="panel panel-info">
         <div className="panel-heading">
           <div className="panel-title"><h3>{monster.called}</h3></div>
         </div>
