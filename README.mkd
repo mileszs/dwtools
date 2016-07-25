@@ -11,3 +11,7 @@ THEN I wanted to make some more tools for Dungeon World, so I made a random mons
 ## Redux
 
 At some point, I'll have fuller thoughts on Redux here. For now, though, I remain on the fence. I don't naturally think in a "functional programming" way, so Redux feels a bit like obfuscation, or perhaps just a solution in search of a problem. It might be that I will never get its utility building toy apps for role-playing games, but that won't stop me from trying.
+
+## History
+
++ v1.0 - Aloof Aboleth
