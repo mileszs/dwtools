@@ -77,7 +77,7 @@ class Monster extends Component {
       return (
         <Panel header={title} collapsible expanded={expanded} bsStyle={style}>
           <p><em>{monster.monster_tags}</em></p>
-          <p>{monster.attack}; ({monster.damage}); {monster.hp} HP; {monster.armor};</p>
+          <p>{monster.attack}; ({monster.damage}); {monster.hp} HP; {monster.armor} armor;</p>
           <p><em>{monster.attack_tags}</em></p>
           <p><strong>Special Qualities:</strong> {monster.special_qualities}</p>
           <p><em>{monster.description} Instinct: {monster.instinct}</em></p>
