@@ -55,7 +55,7 @@ export default {
       'Your shot is deflected and strikes one of your allies.'
     ],
 
-    "Unarmbed / Grappling": [
+    "Unarmed / Grappling": [
       'Your punch strikes the enemy in a heavily armored area breaking your knuckles.',
       'Your opponent grabs your ankle when you kick and holds on tight.',
       'Your opponent deftly slips out of your hold and puts you in a headlock.',
